@@ -1,0 +1,5 @@
+atheris
+PyYAML
+markdown
+tabulate
+rich
