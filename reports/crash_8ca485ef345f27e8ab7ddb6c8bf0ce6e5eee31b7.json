@@ -1,0 +1,11 @@
+{
+  "exception_message": "float floor division by zero",
+  "exception_type": "ZeroDivisionError",
+  "input_b64": "iDIuLzQvsi8wLy0yLzQvMi8vNC+yLzAvLTIvNC8vMi0yMi0yLzItMjItMg==",
+  "input_preview": "2./4//0/-2/4/2//4//0/-2/4//2-22-2/2-22-2",
+  "seed": null,
+  "target": "calc",
+  "trace_steps": [],
+  "traceback": "Traceback (most recent call last):\n  File \"/home/ubuntu/Fuzzing-tool-MSc-project/fuzz_tool/fuzzer.py\", line 645, in test_one_input\n    TARGET_FUNCS[ARGS.target](s)\n  File \"/home/ubuntu/Fuzzing-tool-MSc-project/fuzz_tool/targets/app_calc.py\", line 114, in evaluate\n    return evaluate_with_trace(expr)[0]\n  File \"/home/ubuntu/Fuzzing-tool-MSc-project/fuzz_tool/targets/app_calc.py\", line 102, in evaluate_with_trace\n    return _raise_with_trace(e, rec)\n  File \"/home/ubuntu/Fuzzing-tool-MSc-project/fuzz_tool/targets/app_calc.py\", line 75, in _raise_with_trace\n    raise exc\n  File \"/home/ubuntu/Fuzzing-tool-MSc-project/fuzz_tool/targets/app_calc.py\", line 100, in evaluate_with_trace\n    result = _eval(tree, rec)\n  File \"/home/ubuntu/Fuzzing-tool-MSc-project/fuzz_tool/targets/app_calc.py\", line 30, in _eval\n    return _eval(node.body, rec)\n  File \"/home/ubuntu/Fuzzing-tool-MSc-project/fuzz_tool/targets/app_calc.py\", line 39, in _eval\n    left = _eval(node.left, rec)\n  File \"/home/ubuntu/Fuzzing-tool-MSc-project/fuzz_tool/targets/app_calc.py\", line 39, in _eval\n    left = _eval(node.left, rec)\n  File \"/home/ubuntu/Fuzzing-tool-MSc-project/fuzz_tool/targets/app_calc.py\", line 39, in _eval\n    left = _eval(node.left, rec)\n  [Previous line repeated 9 more times]\n  File \"/home/ubuntu/Fuzzing-tool-MSc-project/fuzz_tool/targets/app_calc.py\", line 54, in _eval\n    res = left // right; rec.log(f\"FDIV {left} // {right} = {res}\"); return res\nZeroDivisionError: float floor division by zero\n",
+  "ts": 1760385974.3992286
+}

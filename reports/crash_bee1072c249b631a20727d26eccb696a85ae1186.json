@@ -1,0 +1,11 @@
+{
+  "exception_message": "integer division or modulo by zero",
+  "exception_type": "ZeroDivisionError",
+  "input_b64": "LS0tLS2IMi8vNC+yLzEvLzSILy80Ly80L7IvMS8viDL7LzQvsi8xLy80iC+yLzIvLzQvsi8xLy80iC+yLzSIL7IvLS0yLS2IMi0tMi8vNC+yLzEvLzSILy80Ly80L7IvMS8viDIvL/+mMA==",
+  "input_preview": "-----2//4//1//4//4//4//1//2/4//1//4//2//4//1//4//4//--2--2--2//4//1//4//4//4//1//2//0",
+  "seed": null,
+  "target": "calc",
+  "trace_steps": [],
+  "traceback": "Traceback (most recent call last):\n  File \"/home/ubuntu/Fuzzing-tool-MSc-project/fuzz_tool/fuzzer.py\", line 645, in test_one_input\n    TARGET_FUNCS[ARGS.target](s)\n  File \"/home/ubuntu/Fuzzing-tool-MSc-project/fuzz_tool/targets/app_calc.py\", line 114, in evaluate\n    return evaluate_with_trace(expr)[0]\n  File \"/home/ubuntu/Fuzzing-tool-MSc-project/fuzz_tool/targets/app_calc.py\", line 102, in evaluate_with_trace\n    return _raise_with_trace(e, rec)\n  File \"/home/ubuntu/Fuzzing-tool-MSc-project/fuzz_tool/targets/app_calc.py\", line 75, in _raise_with_trace\n    raise exc\n  File \"/home/ubuntu/Fuzzing-tool-MSc-project/fuzz_tool/targets/app_calc.py\", line 100, in evaluate_with_trace\n    result = _eval(tree, rec)\n  File \"/home/ubuntu/Fuzzing-tool-MSc-project/fuzz_tool/targets/app_calc.py\", line 30, in _eval\n    return _eval(node.body, rec)\n  File \"/home/ubuntu/Fuzzing-tool-MSc-project/fuzz_tool/targets/app_calc.py\", line 40, in _eval\n    right = _eval(node.right, rec)\n  File \"/home/ubuntu/Fuzzing-tool-MSc-project/fuzz_tool/targets/app_calc.py\", line 54, in _eval\n    res = left // right; rec.log(f\"FDIV {left} // {right} = {res}\"); return res\nZeroDivisionError: integer division or modulo by zero\n",
+  "ts": 1760392483.602637
+}
